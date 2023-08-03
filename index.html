@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="assets/js/script.index.js"></script>
     <link rel="stylesheet" href="assets/css/style.index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>IMC - índice de massa corporal - </title>
 </head>
+
 <body>
 
     <div id="main-div">
 
-            <img src="assets/images/picture.svg" alt="people training">
+        <img id="picture" src="assets/images/picture.svg" alt="people training">
 
         <div id="son-div">
 
             <h1>Calculadora - IMC</h1>
-            
+
             <div id="weight-div">
-                <label class="weight-height">Peso</label>
+                <label class="weight-height">Peso em kg</label>
 
                 <div class="input-field">
-                    <i class="fa-solid fa-weight-hanging" style="color: #bec4cc;"></i>
-                        <input class="inputs-weight-height" type="number" name="Pseso" required>
-                        <p class="measurements">Kg</p>
+                    <i class="fa-solid fa-weight-hanging icon" style="color: #bec4cc;"></i>
+                    <input class="inputs-weight-height" type="number" name="Pseso" required>
+                    <p class="measurements">Kg</p>
                 </div>
             </div>
 
             <div id="height-div">
-                <label class="weight-height">Altura</label>
+                <label class="weight-height">Altura em M</label>
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-ruler" style="color: #bec4cc;"></i>
-                            <input class="inputs-weight-height" type="number" name="Altura" required>
-                            <p class="measurements">M</p>
-                    </div>
+                <div class="input-field">
+                    <i class="fa-solid fa-ruler icon" style="color: #bec4cc;"></i>
+                    <input class="inputs-weight-height" type="number" name="Altura" required>
+                    <p class="measurements">M</p>
+                </div>
             </div>
 
             <div id="button-div">
                 <button id="calculate" type="button" onclick="imc()">Calcular</button>
             </div>
+
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="imc">
+                        <span id="value"></span>
+                        <span id="status">Seu IMC</span>
+                    </div>
+
+                    <div id="description">
+                        <span id="text"></span>
+                    </div>
+
+                </div>
+                <div id="more-infos">
+                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm">Mais informações sobre o IMC
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
     </div>
-    
+
 </body>
+
 </html>
